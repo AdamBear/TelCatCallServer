@@ -22,22 +22,11 @@ handler.enter = function(msg, session, next) {
     var uid = msg.username + '|--|' + rid;
     var sessionService = self.app.get('sessionService');
 
-    //duplicate log in
-    if( !! sessionService.getByUid(uid)) {
-        //踢掉前面一个，再登录一个
-        self.app.rpc.chat.chatRemote.add(session, uid, self.app.get('serverId'), rid, true, function(users){
-            next(null, {
-                users:users
-            });
-        });
-
-        return;
-
-        // next(null, {
-        //     code: 500,
-        //     error: true
-        // });
-        // return;
+    //duplicate log in check
+    var preSession = sessionService.getByUid(uid)
+    if( !! preSession) {
+        //踢掉前面一个，再登录当前session，此处需要判断是否是手机
+        app.rpc.chat.chatRemote.kick(preSession, uid, app.get('serverId'), preSession.get('rid'), null);
     }
 
     session.bind(uid);

@@ -20,7 +20,7 @@ var handler = Handler.prototype;
  */
 handler.send = function(msg, session, next) {
 	var rid = session.get('rid');
-	var username = session.uid.split('*')[0];
+	var username = session.uid.split('|--|')[0];
 	var channelService = this.app.get('channelService');
 	var param = {
 		msg: msg.content,
@@ -35,7 +35,7 @@ handler.send = function(msg, session, next) {
 	}
 	//the target is specific user
 	else {
-		var tuid = msg.target + '*' + rid;
+		var tuid = msg.target + '|--|' + rid;
 		var tsid = channel.getMember(tuid)['sid'];
 		channelService.pushMessageByUids('onChat', param, [{
 			uid: tuid,
