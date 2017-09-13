@@ -8,6 +8,11 @@ var Handler = function(app) {
 
 var handler = Handler.prototype;
 
+//调用用户服务器API来验证用户名或密码是否正确
+handler.verify = function (username, password) {
+    return true;
+}
+
 /**
  * New client entry chat server.
  *
@@ -18,34 +23,63 @@ var handler = Handler.prototype;
  */
 handler.enter = function(msg, session, next) {
     var self = this;
-    var rid = msg.rid;
-    var uid = msg.username + '|--|' + rid;
-    var sessionService = self.app.get('sessionService');
 
+    var uid = msg.uid;
+    var password = msg.password;
+
+    var parts = uid.split("<-->");
+    var username = parts[0];
+    var type = parts[1];
+    var number = parts[2];
+
+    if(!this.verify(username,password)){
+        next(null, {
+            code: 500
+        });
+        return;
+    }
+
+    var rid = username;
+
+    //将客户端加入到room中
+    var addClientToRoom = function () {
+        session.bind(uid);
+
+        session.set('rid', rid);
+        session.set('type', type);
+        session.set('number', number);
+        session.pushAll({'rid':rid, 'type':type, 'number':number}, function(err) {
+            if(err) {
+                console.error('set rid, type, number for session service failed! error is : %j', err.stack);
+            }
+        });
+
+        session.on('closed', onUserLeave.bind(null, self.app));
+
+        //put user into channel
+        self.app.rpc.chat.chatRemote.add(session, uid, self.app.get('serverId'), rid, true, function(users){
+            next(null, {
+                code:200,
+                users:users
+            });
+        });
+    }
+
+    var sessionService = self.app.get('sessionService');
     //duplicate log in check
     var preSession = sessionService.getByUid(uid)
     if( !! preSession) {
-        //踢掉前面一个，再登录当前session，此处需要判断是否是手机
-        app.rpc.chat.chatRemote.kick(preSession, uid, app.get('serverId'), preSession.get('rid'), null);
+        console.info("session duplicated with uid:" + uid + ", closed old session!");
+        self.app.rpc.chat.chatRemote.kick(preSession[0], uid, self.app.get('serverId'), rid , addClientToRoom);
+    }else{
+        addClientToRoom();
     }
 
-    session.bind(uid);
-    session.set('rid', rid);
-    session.push('rid', function(err) {
-        if(err) {
-            console.error('set rid for session service failed! error is : %j', err.stack);
-        }
-    });
-    session.on('closed', onUserLeave.bind(null, self.app));
-
-    //put user into channel
-    self.app.rpc.chat.chatRemote.add(session, uid, self.app.get('serverId'), rid, true, function(users){
-        next(null, {
-            users:users
-        });
-    });
 };
 
+handler.kick = function(msg, session, next) {
+
+}
 /**
  * User log out handler
  *

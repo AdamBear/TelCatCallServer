@@ -1,0 +1,18 @@
+{
+  "chat.chatHandler.makeCall": {
+    "required string from": 1,
+    "required string to": 2
+  },
+
+  "connector.entryHandler.enter": {
+    "required string uid": 1,
+    "required string username": 2,
+    "required string password": 3,
+    "required string type": 4,
+    "required string number": 5
+  },
+
+  "gate.gateHandler.queryEntry": {
+    "required string uid": 1
+  }
+}

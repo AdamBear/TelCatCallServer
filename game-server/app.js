@@ -5,6 +5,7 @@ var abuseFilter = require('./app/servers/chat/filter/abuseFilter');
 var useSocketIO = false;
 
 // route definition for chat server
+// 同一个用户的所有客户端需要分配到同一台chat服务
 var chatRoute = function (session, msg, app, cb) {
     var chatServers = app.getServersByType('chat');
 
@@ -13,7 +14,7 @@ var chatRoute = function (session, msg, app, cb) {
         return;
     }
 
-    var res = dispatcher.dispatch(session.get('rid'), chatServers);
+    var res = dispatcher.dispatch(session.get("rid"), chatServers);
 
     cb(null, res.id);
 };

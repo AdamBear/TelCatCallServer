@@ -1,0 +1,169 @@
+[2017-09-11 22:22:01.712] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error TypeError: Cannot read property 'pushMessage' of undefined
+    at ChatRemote.kick (/app/TelCatCallServer/game-server/app/servers/chat/remote/chatRemote.js:71:9)
+    at Dispatcher.pro.route (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/dispatcher.js:52:10)
+    at Acceptor.cb (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/gateway.js:22:16)
+    at processMsg (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/acceptors/mqtt-acceptor.js:138:12)
+    at Connection.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/acceptors/mqtt-acceptor.js:62:11)
+    at emitOne (events.js:96:13)
+    at Connection.emit (events.js:189:7)
+    at Connection.emitPacket (/app/TelCatCallServer/game-server/node_modules/mqtt-connection/connection.js:14:8)
+    at emitOne (events.js:96:13)
+    at Connection.emit (events.js:189:7)
+[2017-09-12 23:00:00.464] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error TypeError: Cannot read property 'pushMessage' of undefined
+    at ChatRemote.kick (/app/TelCatCallServer/game-server/app/servers/chat/remote/chatRemote.js:71:9)
+    at Dispatcher.pro.route (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/dispatcher.js:52:10)
+    at Acceptor.cb (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/gateway.js:22:16)
+    at processMsg (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/acceptors/mqtt-acceptor.js:138:12)
+    at Connection.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/acceptors/mqtt-acceptor.js:62:11)
+    at emitOne (events.js:96:13)
+    at Connection.emit (events.js:189:7)
+    at Connection.emitPacket (/app/TelCatCallServer/game-server/node_modules/mqtt-connection/connection.js:14:8)
+    at emitOne (events.js:96:13)
+    at Connection.emit (events.js:189:7)
+[2017-09-12 23:08:59.886] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error TypeError: Cannot read property 'pushMessage' of undefined
+    at ChatRemote.kick (/app/TelCatCallServer/game-server/app/servers/chat/remote/chatRemote.js:71:9)
+    at Dispatcher.pro.route (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/dispatcher.js:52:10)
+    at Acceptor.cb (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/gateway.js:22:16)
+    at processMsg (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/acceptors/mqtt-acceptor.js:138:12)
+    at Connection.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-server/acceptors/mqtt-acceptor.js:62:11)
+    at emitOne (events.js:96:13)
+    at Connection.emit (events.js:189:7)
+    at Connection.emitPacket (/app/TelCatCallServer/game-server/node_modules/mqtt-connection/connection.js:14:8)
+    at emitOne (events.js:96:13)
+    at Connection.emit (events.js:189:7)
+[2017-09-13 12:32:37.912] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error ReferenceError: CONST is not defined
+    at /app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:77:23
+    at Array.forEach (native)
+    at Handler.handler.changeCallState (/app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:73:11)
+    at Service.handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/handlerService.js:59:20)
+    at handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/server/server.js:375:25)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:50:7)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/timeout.js:34:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/time.js:17:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+[2017-09-13 12:32:39.517] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error ReferenceError: CONST is not defined
+    at /app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:77:23
+    at Array.forEach (native)
+    at Handler.handler.changeCallState (/app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:73:11)
+    at Service.handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/handlerService.js:59:20)
+    at handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/server/server.js:375:25)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:50:7)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/timeout.js:34:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/time.js:17:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+[2017-09-13 12:32:47.985] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error ReferenceError: CONST is not defined
+    at /app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:77:23
+    at Array.forEach (native)
+    at Handler.handler.changeCallState (/app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:73:11)
+    at Service.handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/handlerService.js:59:20)
+    at handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/server/server.js:375:25)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:50:7)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/timeout.js:34:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/time.js:17:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+[2017-09-13 15:18:23.210] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error ReferenceError: CONST is not defined
+    at /app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:77:23
+    at Array.forEach (native)
+    at Handler.handler.changeCallState (/app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:73:11)
+    at Service.handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/handlerService.js:59:20)
+    at handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/server/server.js:375:25)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:50:7)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/timeout.js:34:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/time.js:17:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+[2017-09-13 15:18:33.269] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error ReferenceError: CONST is not defined
+    at /app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:77:23
+    at Array.forEach (native)
+    at Handler.handler.changeCallState (/app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:73:11)
+    at Service.handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/handlerService.js:59:20)
+    at handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/server/server.js:375:25)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:50:7)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/timeout.js:34:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/time.js:17:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+[2017-09-13 15:22:17.150] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error ReferenceError: CONST is not defined
+    at /app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:77:23
+    at Array.forEach (native)
+    at Handler.handler.changeCallState (/app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:73:11)
+    at Service.handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/handlerService.js:59:20)
+    at handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/server/server.js:375:25)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:50:7)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/timeout.js:34:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/time.js:17:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+[2017-09-13 15:23:03.584] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error ReferenceError: CONST is not defined
+    at /app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:77:23
+    at Array.forEach (native)
+    at Handler.handler.changeCallState (/app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:73:11)
+    at Service.handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/handlerService.js:59:20)
+    at handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/server/server.js:375:25)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:50:7)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/timeout.js:34:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/time.js:17:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+[2017-09-13 15:23:06.662] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc chat-server-1 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 4050
+[2017-09-13 15:23:06.663] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc chat-server-1 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 4050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:23:06.664] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: connector-server-1, msg: {"namespace":"sys","service":"channelRemote","method":"pushMessage","args":["onCall",{"from":"123123","to":"1123123"},["test<-->browser<-->1505287354612"],{"type":"push","userOptions":{},"isPush":true}]}, error code: 5
+[2017-09-13 15:23:06.695] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: chat-server-1 remote: 1, host: 127.0.0.1, port: 4050
+[2017-09-13 15:25:02.809] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error ReferenceError: CONST is not defined
+    at /app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:77:23
+    at Array.forEach (native)
+    at Handler.handler.changeCallState (/app/TelCatCallServer/game-server/app/servers/chat/handler/chatHandler.js:73:11)
+    at Service.handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/handlerService.js:59:20)
+    at handle (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/server/server.js:375:25)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:50:7)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/timeout.js:34:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+    at Filter.before (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/filters/handler/time.js:17:3)
+    at next (/app/TelCatCallServer/game-server/node_modules/pomelo/lib/common/service/filterService.js:58:15)
+[2017-09-13 15:36:33.432] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc chat-server-1 callback timeout 30000, remote server 37 host: 127.0.0.1, port: 4050
+[2017-09-13 15:36:33.434] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc chat-server-1 callback timeout 30000, remote server 37 host: 127.0.0.1, port: 4050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:36:33.435] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: connector-server-1, msg: {"namespace":"sys","service":"channelRemote","method":"pushMessage","args":["onCall",{"from":"123123","to":"1123123"},["test<-->browser<-->1505288093373"],{"type":"push","userOptions":{},"isPush":true}]}, error code: 5
+[2017-09-13 15:36:33.436] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc chat-server-1 callback timeout 30000, remote server 38 host: 127.0.0.1, port: 4050
+[2017-09-13 15:36:33.437] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc chat-server-1 callback timeout 30000, remote server 38 host: 127.0.0.1, port: 4050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:36:33.437] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: connector-server-1, msg: {"namespace":"sys","service":"channelRemote","method":"pushMessage","args":["onCall",{"from":"123123","to":"1123123"},["test<-->browser<-->1505288127580"],{"type":"push","userOptions":{},"isPush":true}]}, error code: 5
+[2017-09-13 15:36:33.438] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc chat-server-1 callback timeout 30000, remote server 39 host: 127.0.0.1, port: 4050
+[2017-09-13 15:36:33.438] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc chat-server-1 callback timeout 30000, remote server 39 host: 127.0.0.1, port: 4050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:36:33.439] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: connector-server-1, msg: {"namespace":"sys","service":"channelRemote","method":"pushMessage","args":["onChangeCallState",{"state":"IDLE","number":null},["test<-->browser<-->1505288093373"],{"type":"push","userOptions":{},"isPush":true}]}, error code: 5
+[2017-09-13 15:36:33.471] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: chat-server-1 remote: 37, host: 127.0.0.1, port: 4050
+[2017-09-13 15:36:33.472] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: chat-server-1 remote: 38, host: 127.0.0.1, port: 4050
+[2017-09-13 15:36:33.472] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: chat-server-1 remote: 39, host: 127.0.0.1, port: 4050
+[2017-09-13 15:39:16.773] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc chat-server-1 callback timeout 30000, remote server 43 host: 127.0.0.1, port: 4050
+[2017-09-13 15:39:16.774] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc chat-server-1 callback timeout 30000, remote server 43 host: 127.0.0.1, port: 4050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:39:16.775] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: connector-server-1, msg: {"namespace":"sys","service":"channelRemote","method":"pushMessage","args":["onCall",{"from":"123123","to":"1123123"},["test<-->browser<-->1505288323317"],{"type":"push","userOptions":{},"isPush":true}]}, error code: 5
+[2017-09-13 15:39:16.776] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc chat-server-1 callback timeout 30000, remote server 44 host: 127.0.0.1, port: 4050
+[2017-09-13 15:39:16.778] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc chat-server-1 callback timeout 30000, remote server 44 host: 127.0.0.1, port: 4050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:39:16.780] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: connector-server-1, msg: {"namespace":"sys","service":"channelRemote","method":"pushMessage","args":["onCall",{"from":"123123","to":"1123123"},["test<-->browser<-->1505288323349"],{"type":"push","userOptions":{},"isPush":true}]}, error code: 5
+[2017-09-13 15:39:16.808] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: chat-server-1 remote: 43, host: 127.0.0.1, port: 4050
+[2017-09-13 15:39:16.809] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: chat-server-1 remote: 44, host: 127.0.0.1, port: 4050

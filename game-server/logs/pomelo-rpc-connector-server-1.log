@@ -12,3 +12,156 @@
     at tryOnTimeout (timers.js:237:5)
     at Timer.listOnTimeout (timers.js:207:5)
 [2017-09-07 15:22:38.287] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test*test","connector-server-1","test"]}, error code: 5
+[2017-09-11 15:38:47.073] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 6050
+[2017-09-11 15:38:47.074] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 15:38:47.075] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test|--|test","connector-server-1","test"]}, error code: 5
+[2017-09-11 15:41:28.729] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 3 host: 127.0.0.1, port: 6050
+[2017-09-11 15:41:28.729] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 3 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 15:41:28.729] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test|--|test","connector-server-1","test"]}, error code: 5
+[2017-09-11 15:50:09.154] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 6050
+[2017-09-11 15:50:09.177] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 15:50:09.178] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->testp<-->browser<-->1505116172910","connector-server-1","test"]}, error code: 5
+[2017-09-11 15:54:06.937] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 4 host: 127.0.0.1, port: 6050
+[2017-09-11 15:54:06.938] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 4 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 15:54:06.938] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->testp<-->browser<-->1505116321003","connector-server-1","test"]}, error code: 5
+[2017-09-11 15:54:06.939] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 5 host: 127.0.0.1, port: 6050
+[2017-09-11 15:54:06.939] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 5 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 15:54:06.942] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->testp<-->browser<-->1505116181779","connector-server-1","test"]}, error code: 5
+[2017-09-11 16:01:24.374] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 2 host: 127.0.0.1, port: 6050
+[2017-09-11 16:01:24.375] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 2 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 16:01:24.376] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->browser<-->1505116848177","connector-server-1","test"]}, error code: 5
+[2017-09-11 16:08:56.906] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 2 host: 127.0.0.1, port: 6050
+[2017-09-11 16:08:56.908] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 2 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 16:08:56.910] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->browser<-->1505117302200","connector-server-1","test"]}, error code: 5
+[2017-09-11 16:08:56.919] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 3 host: 127.0.0.1, port: 6050
+[2017-09-11 16:08:56.920] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 3 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 16:08:56.920] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->browser<-->1505117285326","connector-server-1","test"]}, error code: 5
+[2017-09-11 20:40:08.838] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 6 host: 127.0.0.1, port: 6050
+[2017-09-11 20:40:08.839] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 6 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 20:40:08.839] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->browser<-->1505117359814","connector-server-1","test"]}, error code: 5
+[2017-09-11 20:40:08.839] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 7 host: 127.0.0.1, port: 6050
+[2017-09-11 20:40:08.839] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 7 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 20:40:08.840] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->browser<-->1505117364929","connector-server-1","test"]}, error code: 5
+[2017-09-11 20:43:00.776] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 10 host: 127.0.0.1, port: 6050
+[2017-09-11 20:43:00.776] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 10 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 20:43:00.777] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->browser<-->1505133579170","connector-server-1","test"]}, error code: 5
+[2017-09-11 20:43:00.778] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 11 host: 127.0.0.1, port: 6050
+[2017-09-11 20:43:00.780] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 11 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 20:43:00.780] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->browser<-->1505133579196","connector-server-1","test"]}, error code: 5
+[2017-09-11 20:43:07.298] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 14 host: 127.0.0.1, port: 6050
+[2017-09-11 20:43:07.298] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 14 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-11 20:43:07.298] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"user","serverType":"chat","service":"chatRemote","method":"kick","args":["test<-->browser<-->1505133751166","connector-server-1","test"]}, error code: 5
+[2017-09-13 15:23:05.586] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mmqtt rpc client connector-server-1 checkKeepAlive timeout from remote server chat-server-1 for 20000 lastPing: 1505287365583 lastPong: 1505287355585
+[2017-09-13 15:23:05.994] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 5 host: 127.0.0.1, port: 6050
+[2017-09-13 15:23:05.995] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 5 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:23:05.996] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"sys","serverType":"chat","service":"msgRemote","method":"forwardMessage","args":[{"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.makeCall","body":{"uid":"test<-->browser<-->1505287354612","from":"123123","to":"1123123"},"compressGzip":0},{"id":4,"frontendId":"connector-server-1","uid":"test<-->browser<-->1505287354612","settings":{"rid":"test","type":"browser","number":"1505287354612"}}]}, error code: 5
+[2017-09-13 15:23:05.998] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 6 host: 127.0.0.1, port: 6050
+[2017-09-13 15:23:05.998] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 6 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:23:06.000] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"sys","serverType":"chat","service":"msgRemote","method":"forwardMessage","args":[{"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.changeCallState","body":{"state":"IDLE","number":null},"compressGzip":0},{"id":4,"frontendId":"connector-server-1","uid":"test<-->browser<-->1505287354612","settings":{"rid":"test","type":"browser","number":"1505287354612"}}]}, error code: 5
+[2017-09-13 15:35:56.069] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mmqtt rpc client connector-server-1 checkKeepAlive timeout from remote server chat-server-1 for 20000 lastPing: 1505288136065 lastPong: 1505288126066
+[2017-09-13 15:35:59.146] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 28 host: 127.0.0.1, port: 6050
+[2017-09-13 15:35:59.147] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 28 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:35:59.148] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"sys","serverType":"chat","service":"msgRemote","method":"forwardMessage","args":[{"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.makeCall","body":{"uid":"test<-->browser<-->1505288127580","from":"123123","to":"1123123"},"compressGzip":0},{"id":10,"frontendId":"connector-server-1","uid":"test<-->browser<-->1505288127580","settings":{"rid":"test","type":"browser","number":"1505288127580"}}]}, error code: 5
+[2017-09-13 15:35:59.150] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 29 host: 127.0.0.1, port: 6050
+[2017-09-13 15:35:59.150] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 29 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:35:59.152] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"sys","serverType":"chat","service":"msgRemote","method":"forwardMessage","args":[{"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.changeCallState","body":{"state":"IDLE","number":null},"compressGzip":0},{"id":10,"frontendId":"connector-server-1","uid":"test<-->browser<-->1505288127580","settings":{"rid":"test","type":"browser","number":"1505288127580"}}]}, error code: 5
+[2017-09-13 15:39:13.579] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 4 host: 127.0.0.1, port: 6050
+[2017-09-13 15:39:13.580] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 4 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:39:13.580] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"sys","serverType":"chat","service":"msgRemote","method":"forwardMessage","args":[{"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.makeCall","body":{"uid":"test<-->browser<-->1505288323317","from":"123123","to":"1123123"},"compressGzip":0},{"id":11,"frontendId":"connector-server-1","uid":"test<-->browser<-->1505288323317","settings":{"rid":"test","type":"browser","number":"1505288323317"}}]}, error code: 5
+[2017-09-13 15:39:13.582] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 5 host: 127.0.0.1, port: 6050
+[2017-09-13 15:39:13.584] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 5 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:39:13.584] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"sys","serverType":"chat","service":"msgRemote","method":"forwardMessage","args":[{"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.changeCallState","body":{"state":"IDLE","number":null},"compressGzip":0},{"id":11,"frontendId":"connector-server-1","uid":"test<-->browser<-->1505288323317","settings":{"rid":"test","type":"browser","number":"1505288323317"}}]}, error code: 5
+[2017-09-13 15:39:16.229] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 6 host: 127.0.0.1, port: 6050
+[2017-09-13 15:39:16.230] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 6 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:39:16.230] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"sys","serverType":"chat","service":"msgRemote","method":"forwardMessage","args":[{"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.makeCall","body":{"uid":"test<-->browser<-->1505288323349","from":"123123","to":"1123123"},"compressGzip":0},{"id":12,"frontendId":"connector-server-1","uid":"test<-->browser<-->1505288323349","settings":{"rid":"test","type":"browser","number":"1505288323349"}}]}, error code: 5
+[2017-09-13 15:39:16.231] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 7 host: 127.0.0.1, port: 6050
+[2017-09-13 15:39:16.231] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 7 host: 127.0.0.1, port: 6050
+    at Timeout.<anonymous> (/app/TelCatCallServer/game-server/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+[2017-09-13 15:39:16.231] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: chat-server-1, msg: {"namespace":"sys","serverType":"chat","service":"msgRemote","method":"forwardMessage","args":[{"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.changeCallState","body":{"state":"IDLE","number":null},"compressGzip":0},{"id":12,"frontendId":"connector-server-1","uid":"test<-->browser<-->1505288323349","settings":{"rid":"test","type":"browser","number":"1505288323349"}}]}, error code: 5
+[2017-09-13 15:39:16.808] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: connector-server-1 remote: 4, host: 127.0.0.1, port: 6050
+[2017-09-13 15:39:16.809] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: connector-server-1 remote: 5, host: 127.0.0.1, port: 6050
+[2017-09-13 15:39:16.809] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: connector-server-1 remote: 6, host: 127.0.0.1, port: 6050
+[2017-09-13 15:39:16.809] [WARN] pomelo-rpc - [33m[mqtt-mailbox] [39mtimer is not exsits, serverId: connector-server-1 remote: 7, host: 127.0.0.1, port: 6050

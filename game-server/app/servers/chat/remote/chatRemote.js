@@ -18,10 +18,9 @@ var ChatRemote = function(app) {
  */
 ChatRemote.prototype.add = function(uid, sid, name, flag, cb) {
 	var channel = this.channelService.getChannel(name, flag);
-	var username = uid.split('|--|')[0];
 	var param = {
 		route: 'onAdd',
-		user: username
+		user: uid
 	};
 	channel.pushMessage(param);
 
@@ -47,9 +46,6 @@ ChatRemote.prototype.get = function(name, flag) {
 	if( !! channel) {
 		users = channel.getMembers();
 	}
-	for(var i = 0; i < users.length; i++) {
-		users[i] = users[i].split('|--|')[0];
-	}
 	return users;
 };
 
@@ -61,16 +57,18 @@ ChatRemote.prototype.get = function(name, flag) {
  * @param {String} name channel name
  *
  */
-ChatRemote.prototype.kick = function(uid, sid, name) {
+ChatRemote.prototype.kick = function(uid, sid, name, cb) {
 	var channel = this.channelService.getChannel(name, false);
 	// leave channel
 	if( !! channel) {
 		channel.leave(uid, sid);
 	}
-	var username = uid.split('|--|')[0];
+
 	var param = {
 		route: 'onLeave',
-		user: username
+		user: uid
 	};
 	channel.pushMessage(param);
+
+	if(cb) cb(null);
 };
