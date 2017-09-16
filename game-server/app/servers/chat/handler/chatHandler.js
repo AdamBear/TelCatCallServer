@@ -62,11 +62,13 @@ handler.kick = function(msg, session, next) {
 handler.changeCallState = function(msg, session, next) {
     var parts = session.uid.split("<-->");
     var username = parts[0];
-
+    var fromNumber = parts[2];
     var rid = username;
 
     var channelService = this.app.get('channelService');
     var param = {
+        user: session.uid,
+        from: fromNumber,
         state: msg.state,
         number: msg.number
     };
@@ -76,6 +78,7 @@ handler.changeCallState = function(msg, session, next) {
     var users = channel.getMembers();
     users.forEach(function (user) {
         var parts = user.split("<-->");
+        //todo: debug
         var u_type = parts[1];
 
         //if(u_type === CONST.CONST.CLIENT_TYPE.BROWSER){

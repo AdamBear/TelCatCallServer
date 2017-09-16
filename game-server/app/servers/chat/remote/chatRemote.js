@@ -18,9 +18,18 @@ var ChatRemote = function(app) {
  */
 ChatRemote.prototype.add = function(uid, sid, name, flag, cb) {
 	var channel = this.channelService.getChannel(name, flag);
+
+	var parts = uid.split("<-->");
+    var username = parts[0];
+    var type = parts[1];
+    var number = parts[2];
+
 	var param = {
 		route: 'onAdd',
-		user: uid
+		user: uid,
+		username:username,
+		type:type,
+		number:number
 	};
 	channel.pushMessage(param);
 
@@ -64,9 +73,17 @@ ChatRemote.prototype.kick = function(uid, sid, name, cb) {
 		channel.leave(uid, sid);
 	}
 
+    var parts = uid.split("<-->");
+    var username = parts[0];
+    var type = parts[1];
+    var number = parts[2];
+
 	var param = {
 		route: 'onLeave',
-		user: uid
+        user: uid,
+        username:username,
+        type:type,
+        number:number
 	};
 	channel.pushMessage(param);
 

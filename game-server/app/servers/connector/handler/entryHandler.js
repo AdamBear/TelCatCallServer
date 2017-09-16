@@ -9,8 +9,24 @@ var Handler = function(app) {
 var handler = Handler.prototype;
 
 //调用用户服务器API来验证用户名或密码是否正确
-handler.verify = function (username, password) {
-    return true;
+handler.verify = function (username, password, success, fail) {
+    //todo: only for test
+    return success();
+
+    var request = require('request');
+    request.post('http://user.crm.beta.weimao.com/public/login', {followAllRedirects:true,form:{username:username, password:password}}, function (error, response, body) {
+        if (!error) {
+            body = JSON.parse(body);
+            if(body.status == 200){
+                return success();
+            }else{
+                return fail(body.message);
+            }
+        }else{
+            console.error(error, body);
+            return fail(error);
+        }
+    })
 }
 
 /**
@@ -32,48 +48,56 @@ handler.enter = function(msg, session, next) {
     var type = parts[1];
     var number = parts[2];
 
-    if(!this.verify(username,password)){
-        next(null, {
-            code: 500
-        });
-        return;
-    }
-
     var rid = username;
 
-    //将客户端加入到room中
-    var addClientToRoom = function () {
-        session.bind(uid);
+    //进入房间函数
+    var enterToRoom = function () {
+        //将客户端加入到room中
+        var addClientToRoom = function () {
+            session.bind(uid);
 
-        session.set('rid', rid);
-        session.set('type', type);
-        session.set('number', number);
-        session.pushAll({'rid':rid, 'type':type, 'number':number}, function(err) {
-            if(err) {
-                console.error('set rid, type, number for session service failed! error is : %j', err.stack);
-            }
-        });
-
-        session.on('closed', onUserLeave.bind(null, self.app));
-
-        //put user into channel
-        self.app.rpc.chat.chatRemote.add(session, uid, self.app.get('serverId'), rid, true, function(users){
-            next(null, {
-                code:200,
-                users:users
+            session.set('rid', rid);
+            session.set('type', type);
+            session.set('number', number);
+            session.pushAll({'rid':rid, 'type':type, 'number':number}, function(err) {
+                if(err) {
+                    console.error('set rid, type, number for session service failed! error is : %j', err.stack);
+                }
             });
-        });
+
+            session.on('closed', onUserLeave.bind(null, self.app));
+
+            //put user into channel
+            self.app.rpc.chat.chatRemote.add(session, uid, self.app.get('serverId'), rid, true, function(users){
+                next(null, {
+                    code:200,
+                    users:users
+                });
+            });
+        }
+
+        var sessionService = self.app.get('sessionService');
+        //duplicate log in check
+        var preSession = sessionService.getByUid(uid)
+        if( !! preSession) {
+            console.info("session duplicated with uid:" + uid + ", closed old session!");
+            self.app.rpc.chat.chatRemote.kick(preSession[0], uid, self.app.get('serverId'), rid , addClientToRoom);
+        }else{
+            addClientToRoom();
+        }
     }
 
-    var sessionService = self.app.get('sessionService');
-    //duplicate log in check
-    var preSession = sessionService.getByUid(uid)
-    if( !! preSession) {
-        console.info("session duplicated with uid:" + uid + ", closed old session!");
-        self.app.rpc.chat.chatRemote.kick(preSession[0], uid, self.app.get('serverId'), rid , addClientToRoom);
-    }else{
-        addClientToRoom();
-    }
+    //验证成功后进入房间
+    this.verify(username,password, function success() {
+        enterToRoom();
+        return
+    }, function fail(err) {
+        next(null, {
+            code: 500,
+            error:err
+        });
+        return;
+    });
 
 };
 
