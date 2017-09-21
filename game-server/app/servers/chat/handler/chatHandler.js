@@ -126,6 +126,7 @@ handler.sendRecordUrl = function(msg, session, next) {
     };
     channel = channelService.getChannel(rid, false);
 
+    var uids = [];
     var users = channel.getMembers();
     users.forEach(function (user) {
         //暂时不考虑限制通知端一定是浏览器

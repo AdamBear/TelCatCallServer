@@ -72,7 +72,7 @@ app.configure('production|development', 'gate', function () {
 app.configure('production|development', function () {
     // route configures
 
-    app.set('ssh_config_params', '-p 128');
+    app.set('ssh_config_params', ['-p 128']);
     app.enable('systemMonitor');
 
     app.filter(pomelo.filters.time()); //开启conn日志，对应pomelo-admin模块下conn request
