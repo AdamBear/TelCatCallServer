@@ -62,13 +62,12 @@ handler.kick = function(msg, session, next) {
 handler.changeCallState = function(msg, session, next) {
     var parts = session.uid.split("<-->");
     var username = parts[0];
-    var fromNumber = parts[2];
     var rid = username;
 
     var channelService = this.app.get('channelService');
     var param = {
         user: session.uid,
-        from: fromNumber,
+        from: msg.from,
         state: msg.state,
         number: msg.number
     };
@@ -77,9 +76,9 @@ handler.changeCallState = function(msg, session, next) {
     var uids = [];
     var users = channel.getMembers();
     users.forEach(function (user) {
-        var parts = user.split("<-->");
-        //todo: debug
-        var u_type = parts[1];
+        //暂时不考虑限制通知端一定是浏览器
+        //var parts = user.split("<-->");
+        //var u_type = parts[1];
 
         //if(u_type === CONST.CONST.CLIENT_TYPE.BROWSER){
 			uids.push({
@@ -108,6 +107,42 @@ handler.getUsers = function(msg, session, next) {
     var users = channel.getMembers();
     next(null, {
     	users:users,
+        code:200,
+        route: msg.route
+    });
+}
+
+handler.sendRecordUrl = function(msg, session, next) {
+    var parts = session.uid.split("<-->");
+    var username = parts[0];
+    var rid = username;
+
+    var channelService = this.app.get('channelService');
+    var param = {
+        user: session.uid,
+        from: msg.from,
+        to: msg.to,
+        url: msg.url
+    };
+    channel = channelService.getChannel(rid, false);
+
+    var users = channel.getMembers();
+    users.forEach(function (user) {
+        //暂时不考虑限制通知端一定是浏览器
+        //var parts = user.split("<-->");
+        //var u_type = parts[1];
+
+        //if(u_type === CONST.CONST.CLIENT_TYPE.BROWSER){
+        uids.push({
+            uid: user,
+            sid: channel.getMember(user)['sid']
+        });
+        //}
+    });
+
+    channelService.pushMessageByUids('onRecorded', param, uids);
+
+    next(null, {
         code:200,
         route: msg.route
     });

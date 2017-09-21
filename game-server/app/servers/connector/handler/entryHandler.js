@@ -9,24 +9,49 @@ var Handler = function(app) {
 var handler = Handler.prototype;
 
 //调用用户服务器API来验证用户名或密码是否正确
+//
 handler.verify = function (username, password, success, fail) {
-    //todo: only for test
-    return success();
+    //DONE: only for test
+    //return success();
 
-    var request = require('request');
-    request.post('http://user.crm.beta.weimao.com/public/login', {followAllRedirects:true,form:{username:username, password:password}}, function (error, response, body) {
-        if (!error) {
-            body = JSON.parse(body);
-            if(body.status == 200){
-                return success();
-            }else{
-                return fail(body.message);
-            }
-        }else{
-            console.error(error, body);
-            return fail(error);
+    var http = require("follow-redirects").http;
+
+    var data = require("querystring").stringify({username:username, password:password});
+    var opt = {
+        method: "POST",
+        host: "user.crm.weimao.com",
+        port: 80,
+        path: "/public/login",
+        headers: {
+            "Content-Type": 'application/x-www-form-urlencoded',
+            "Content-Length": Buffer.byteLength(data)
         }
-    })
+    };
+
+    var req = http.request(opt, function (serverFeedback) {
+        if (serverFeedback.statusCode == 200) {
+            var body = "";
+            serverFeedback.on('data', function (data) { body += data; })
+                .on('end', function () {
+                    body = JSON.parse(body);
+                    if(body.status == 200){
+                        return success();
+                    }else{
+                        return fail(body.message);
+                    }
+                });
+        }
+        else {
+            return fail(serverFeedback);
+        }
+    });
+
+    req.on('error', function (e){
+        return fail(e);
+    });
+
+    req.write(data);
+    req.end();
 }
 
 /**
