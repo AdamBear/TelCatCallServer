@@ -1,4 +1,4 @@
 cd game-server/
-pomelo start
+pomelo start -e production
 
 cd ..
