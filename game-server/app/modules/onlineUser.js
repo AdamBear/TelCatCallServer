@@ -34,7 +34,7 @@ Module.prototype.monitorHandler = function (agent, msg, cb) {
 		return;
 	}
     var info = connectionService.getStatisticsInfo();
-    console.log('serverId: ' ,agent.id, ' info: ', info);
+    //console.log('serverId: ' ,agent.id, ' info: ', info);
     cb(null, {
         serverId: agent.id,
         body    : info
@@ -57,7 +57,7 @@ Module.prototype.clientHandler = function (agent, msg, cb) {
                 callback();
             });
         },function(err,res){
-            console.log('onLineUser: ', onLineUser);
+            //console.log('onLineUser: ', onLineUser);
             cb(null,{
                 body : onLineUser
             });
