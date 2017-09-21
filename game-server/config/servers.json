@@ -10,15 +10,16 @@
       {"id": "gate-server-1", "host": "127.0.0.1", "clientPort": 3014, "frontend": true}
     ]
   },
-  "production":{
+  "production": {
     "connector":[
-      {"id":"connector-server-1", "host":"127.0.0.1", "port":4050, "clientPort": 3050, "frontend": true}
+      {"id":"connector-server-1", "host":"117.25.156.237", "port":4050, "clientPort": 3050, "frontend": true},
+      {"id":"connector-server-2", "host":"110.80.136.89", "port":4050, "clientPort": 3050, "frontend": true}
     ],
     "chat":[
-      {"id":"chat-server-1", "host":"127.0.0.1", "port":6050}
+      {"id":"chat-server-1", "host":"117.25.156.237", "port":6050}
     ],
     "gate":[
-      {"id": "gate-server-1", "host": "127.0.0.1", "clientPort": 3014, "frontend": true}
+      {"id": "gate-server-1", "host": "117.25.156.237", "clientPort": 3014, "frontend": true}
     ]
   }
 }
